@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workplace Dashboard</title>
+   <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fff);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #3b82f6, #6366f1);
+      color: white;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+    nav a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
+    .btn {
+      color: blue;
+      margin: 20px;
+      font-size: 1.1em;
+    }
+    .blueish-btn {
+      background: linear-gradient(145deg, #3a8dde, #67bdfc);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(58, 141, 222, 0.4);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      margin: 5px;
+    }
+    .blueish-btn:hover {
+      background: linear-gradient(145deg, #67bdfc, #3a8dde);
+      box-shadow: 0 8px 20px rgba(58, 141, 222, 0.6);
+      transform: translateY(-2px);
+    }
+    .container {
+      padding: 30px;
+      flex: 1;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
+    footer {
+      background-color: #111827;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌟 Workplace Pro</h1>
+    <nav>
+      <a href="#" id="count-text">R0.00</a>
+    </nav>
+    <button class="blueish-btn">CASHOUT</button>
+  </header>
+
+  <h4 class="btn">Are you ready for work? If you are, then you can start working here — no registration needed.</h4>
+
+  <div class="container">
+    <div class="grid">
+      <!-- 20 Task Buttons -->
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn1', 'task1.html')">task 1</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn2', 'task2.html')">task 2</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn3', 'task3.html')">task 3</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn4', 'task4.html')">task 4</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn5', 'task5.html')">task 5</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn6', 'task6.html')">task 6</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn7', 'task7.html')">task 7</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn8', 'task8.html')">task 8</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn9', 'task9.html')">task 9</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn10', 'task10.html')">task 10</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn11', 'task11.html')">task 11</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn12', 'task12.html')">task 12</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn13', 'task13.html')">task 13</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn14', 'task14.html')">task 14</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn15', 'task15.html')">task 15</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn16', 'task16.html')">task 16</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn17', 'task17.html')">task 17</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn18', 'task18.html')">task 18</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn19', 'task19.html')">task 19</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn20', 'task20.html')">task 20</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn21', 'task21.html')">task 21</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn22', 'task22.html')">task 22</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn23', 'task23.html')">task 23</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn24', 'task24.html')">task 24</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn25', 'task25.html')">task 25</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn26', 'task26.html')">task 26</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn27', 'task27.html')">task 27</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn28', 'task28.html')">task 28</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn29', 'task29.html')">task 29</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn30', 'task30.html')">task 30</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn31', 'task31.html')">task 31</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn32', 'task32.html')">task 32</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn33', 'task33.html')">task 33</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn34', 'task34.html')">task 34</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn35', 'task35.html')">task 35</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn36', 'task36.html')">task 36</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn37', 'task37.html')">task 37</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn38', 'task38.html')">task 38</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn39', 'task39.html')">task 39</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn40', 'task40.html')">task 40</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn41', 'task41.html')">task 41</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn42', 'task42.html')">task 42</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn43', 'task43.html')">task 43</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn44', 'task44.html')">task 44</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn45', 'task45.html')">task 45</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn46', 'task46.html')">task 46</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn47', 'task47.html')">task 47</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn48', 'task48.html')">task 48</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn49', 'task49.html')">task 49</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn50', 'task50.html')">task 50</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn51', 'task51.html')">task 51</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn52', 'task52.html')">task 52</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn53', 'task53.html')">task 53</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn54', 'task54.html')">task 54</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn55', 'task55.html')">task 55</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn56', 'task56.html')">task 56</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn57', 'task57.html')">task 57</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn58', 'task58.html')">task 58</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn59', 'task59.html')">task 59</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn60', 'task60.html')">task 60</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn61', 'task61.html')">task 61</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn62', 'task62.html')">task 62</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn63', 'task63.html')">task 63</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn64', 'task64.html')">task 64</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn65', 'task65.html')">task 65</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn66', 'task66.html')">task 66</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn67', 'task67.html')">task 67</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn68', 'task68.html')">task 68</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn69', 'task69.html')">task 69</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn70', 'task70.html')">task 70</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn71', 'task71.html')">task 71</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn72', 'task72.html')">task 72</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn73', 'task73.html')">task 73</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn74', 'task74.html')">task 74</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn75', 'task75.html')">task 75</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn76', 'task76.html')">task 76</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn77', 'task77.html')">task 77</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn78', 'task78.html')">task 78</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn79', 'task79.html')">task 79</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn80', 'task80.html')">task 80</button>
+     <button class="blueish-btn" onclick="increaseCount(this, 'btn81', 'task81.html')">task 81</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn82', 'task82.html')">task 82</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn83', 'task83.html')">task 83</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn84', 'task84.html')">task 84</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn85', 'task85.html')">task 85</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn86', 'task86.html')">task 86</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn87', 'task87.html')">task 87</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn88', 'task88.html')">task 88</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn89', 'task89.html')">task 89</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn90', 'task90.html')">task 90</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn91', 'task91.html')">task 91</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn92', 'task92.html')">task 92</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn93', 'task93.html')">task 93</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn94', 'task94.html')">task 94</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn95', 'task95.html')">task 95</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn96', 'task96.html')">task 96</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn97', 'task97.html')">task 97</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn98', 'task98.html')">task 98</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn99', 'task99.html')">task 99</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn100', 'task100.html')">task 100</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn101', 'task101.html')">task 101</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn102', 'task102.html')">task 102</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn103', 'task103.html')">task 103</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn104', 'task104.html')">task 104</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn105', 'task105.html')">task 105</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn106', 'task106.html')">task 106</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn107', 'task107.html')">task 107</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn108', 'task108.html')">task 108</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn109', 'task109.html')">task 109</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn110', 'task110.html')">task 110</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn111', 'task111.html')">task 111</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn112', 'task112.html')">task 112</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn113', 'task113.html')">task 113</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn114', 'task114.html')">task 114</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn115', 'task115.html')">task 115</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn116', 'task116.html')">task 116</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn117', 'task117.html')">task 117</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn118', 'task118.html')">task 118</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn119', 'task119.html')">task 119</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn120', 'task120.html')">task 120</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn121', 'task121.html')">task 121</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn122', 'task122.html')">task 122</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn123', 'task123.html')">task 123</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn124', 'task124.html')">task 124</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn125', 'task125.html')">task 125</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn126', 'task126.html')">task 126</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn127', 'task127.html')">task 127</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn128', 'task128.html')">task 128</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn129', 'task129.html')">task 129</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn130', 'task130.html')">task 130</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn131', 'task131.html')">task 131</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn132', 'task132.html')">task 132</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn133', 'task133.html')">task 133</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn134', 'task134.html')">task 134</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn135', 'task135.html')">task 135</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn136', 'task136.html')">task 136</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn137', 'task137.html')">task 137</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn138', 'task138.html')">task 138</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn139', 'task139.html')">task 139</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn140', 'task140.html')">task 140</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn141', 'task141.html')">task 141</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn142', 'task142.html')">task 142</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn143', 'task143.html')">task 143</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn144', 'task144.html')">task 144</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn145', 'task145.html')">task 145</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn146', 'task146.html')">task 146</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn147', 'task147.html')">task 147</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn148', 'task148.html')">task 148</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn149', 'task149.html')">task 149</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn150', 'task150.html')">task 150</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn151', 'task151.html')">task 151</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn152', 'task152.html')">task 152</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn153', 'task153.html')">task 153</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn154', 'task154.html')">task 154</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn155', 'task155.html')">task 155</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn156', 'task156.html')">task 156</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn157', 'task157.html')">task 157</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn158', 'task158.html')">task 158</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn159', 'task159.html')">task 159</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn160', 'task160.html')">task 160</button>
+    <button class="blueish-btn" onclick="increaseCount(this, 'btn161', 'task161.html61')">task 161</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn162', 'task162.html')">task 162</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn163', 'task163.html')">task 163</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn164', 'task164.html')">task 164</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn165', 'task165.html')">task 165</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn166', 'task166.html')">task 166</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn167', 'task167.html')">task 167</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn168', 'task168.html')">task 168</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn169', 'task169.html')">task 169</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn170', 'task170.html')">task 170</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn171', 'task171.html')">task 171</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn172', 'task172.html')">task 172</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn173', 'task173.html')">task 173</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn174', 'task174.html')">task 174</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn175', 'task175.html')">task 175</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn176', 'task176.html')">task 176</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn177', 'task177.html')">task 177</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn178', 'task178.html')">task 178</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn179', 'task179.html')">task 179</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn180', 'task180.html')">task 180</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn181', 'task181.html')">task 181</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn182', 'task182.html')">task 182</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn183', 'task183.html')">task 183</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn184', 'task184.html')">task 184</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn185', 'task185.html')">task 185</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn186', 'task186.html')">task 186</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn187', 'task187.html')">task 187</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn188', 'task188.html')">task 188</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn189', 'task189.html')">task 189</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn190', 'task190.html')">task 190</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn191', 'task191.html')">task 191</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn192', 'task192.html')">task 192</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn193', 'task193.html')">task 193</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn194', 'task194.html')">task 194</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn195', 'task195.html')">task 195</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn196', 'task196.html')">task 196</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn197', 'task197.html')">task 197</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn198', 'task198.html')">task 198</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn199', 'task199.html')">task 199</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn200', 'task200.html')">task 200</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn201', 'task201.html')">task 201</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn202', 'task202.html')">task 202</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn203', 'task203.html')">task 203</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn204', 'task204.html')">task 204</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn205', 'task205.html')">task 205</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn206', 'task206.html')">task 206</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn207', 'task207.html')">task 207</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn208', 'task208.html')">task 208</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn209', 'task209.html')">task 209</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn210', 'task210.html')">task 210</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn211', 'task211.html')">task 211</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn212', 'task212.html')">task 212</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn213', 'task213.html')">task 213</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn214', 'task214.html')">task 214</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn215', 'task215.html')">task 215</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn216', 'task216.html')">task 216</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn217', 'task217.html')">task 217</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn218', 'task218.html')">task 218</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn219', 'task219.html')">task 219</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn220', 'task220.html')">task 220</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn221', 'task221.html')">task 221</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn222', 'task222.html')">task 222</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn223', 'task223.html')">task 223</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn224', 'task224.html')">task 224</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn225', 'task225.html')">task 225</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn226', 'task226.html')">task 226</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn227', 'task227.html')">task 227</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn228', 'task228.html')">task 228</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn229', 'task229.html')">task 229</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn230', 'task230.html')">task 230</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn231', 'task231.html')">task 231</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn232', 'task232.html')">task 232</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn233', 'task233.html')">task 233</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn234', 'task234.html')">task 234</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn235', 'task235.html')">task 235</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn236', 'task236.html')">task 236</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn237', 'task237.html')">task 237</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn238', 'task238.html')">task 238</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn239', 'task239.html')">task 239</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn240', 'task240.html')">task 240</button>
+     <button class="blueish-btn" onclick="increaseCount(this, 'btn241', 'task241.html')">task 241</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn242', 'task242.html')">task 242</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn243', 'task243.html')">task 243</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn244', 'task244.html')">task 244</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn245', 'task245.html')">task 245</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn246', 'task246.html')">task 246</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn247', 'task247.html')">task 247</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn248', 'task248.html')">task 248</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn249', 'task249.html')">task 249</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn250', 'task250.html')">task 250</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn251', 'task251.html')">task 251</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn252', 'task252.html')">task 252</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn253', 'task253.html')">task 253</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn254', 'task254.html')">task 254</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn255', 'task255.html')">task 255</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn256', 'task256.html')">task 256</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn257', 'task257.html')">task 257</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn258', 'task258.html')">task 258</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn259', 'task259.html')">task 259</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn260', 'task260.html')">task 260</button>
+  <button class="blueish-btn" onclick="increaseCount(this, 'btn261', 'task261.html')">task 261</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn262', 'task262.html')">task 262</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn263', 'task263.html')">task 263</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn264', 'task264.html')">task 264</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn265', 'task265.html')">task 265</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn266', 'task266.html')">task 266</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn267', 'task267.html')">task 267</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn268', 'task268.html')">task 268</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn269', 'task269.html')">task 269</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn270', 'task270.html')">task 270</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn271', 'task271.html')">task 271</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn272', 'task272.html')">task 272</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn273', 'task273.html')">task 273</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn274', 'task274.html')">task 274</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn275', 'task275.html')">task 275</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn276', 'task276.html')">task 276</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn277', 'task277.html')">task 277</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn278', 'task278.html')">task 278</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn279', 'task279.html')">task 279</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn280', 'task280.html')">task 280</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn281', 'task281.html')">task 281</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn282', 'task282.html')">task 282</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn283', 'task283.html')">task 283</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn284', 'task284.html')">task 284</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn285', 'task285.html')">task 285</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn286', 'task286.html')">task 286</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn287', 'task287.html')">task 287</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn288', 'task288.html')">task 288</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn289', 'task289.html')">task 289</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn290', 'task290.html')">task 290</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn291', 'task291.html')">task 291</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn292', 'task292.html')">task 292</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn293', 'task293.html')">task 293</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn294', 'task294.html')">task 294</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn295', 'task295.html')">task 295</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn296', 'task296.html')">task 296</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn297', 'task297.html')">task 297</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn298', 'task298.html')">task 298</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn299', 'task299.html')">task 299</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn300', 'task300.html')">task 300</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn301', 'task301.html')">task 301</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn302', 'task302.html')">task 302</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn303', 'task303.html')">task 303</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn304', 'task304.html')">task 304</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn305', 'task305.html')">task 305</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn306', 'task306.html')">task 306</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn307', 'task307.html')">task 307</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn308', 'task308.html')">task 308</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn309', 'task309.html')">task 309</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn310', 'task310.html')">task 310</button>
+
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn310', 'task310.html')">task 310</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn312', 'task312.html')">task 312</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn313', 'task313.html')">task 313</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn314', 'task314.html')">task 314</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn315', 'task315.html')">task 315</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn316', 'task316.html')">task 316</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn317', 'task317.html')">task 317</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn318', 'task318.html')">task 318</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn319', 'task319.html')">task 319</button>
+      <button class="blueish-btn" onclick="increaseCount(this, 'btn320', 'task320.html')">task 320</button>
+    
+    </div>
+  </div>
+
+  <br />
+  <video width="430" height="160" controls>
+    <source src="your-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <footer>
+    &copy; 2025 Workplace Pro. All rights reserved.
+  </footer>
+
+ <script>
+    const EXPIRATION_HOURS = 24;
+
+    function isExpired(timestamp) {
+      const now = Date.now();
+      return now - timestamp > EXPIRATION_HOURS * 60 * 60 * 1000;
+    }
+
+    let savedData = JSON.parse(localStorage.getItem('appData'));
+    let count = 0;
+
+    if (savedData && !isExpired(savedData.timestamp)) {
+      count = savedData.count;
+      savedData.clickedButtons.forEach(id => {
+        const button = document.querySelector(`[onclick*="${id}"]`);
+        if (button) button.disabled = true;
+      });
+    } else {
+      localStorage.removeItem('appData');
+    }
+
+    document.getElementById("count-text").textContent = "R: " + count.toFixed(2);
+
+    function increaseCount(button, buttonId, taskPage) {
+      if (button.disabled) return;
+
+      count += 0.1566;
+      button.disabled = true;
+
+      let clickedButtons = [buttonId];
+      const previous = JSON.parse(localStorage.getItem('appData'));
+      if (previous && !isExpired(previous.timestamp)) {
+        clickedButtons = [...new Set([...previous.clickedButtons, buttonId])];
+      }
+
+      const dataToStore = {
+        count,
+        clickedButtons,
+        timestamp: Date.now()
+      };
+
+      localStorage.setItem('appData', JSON.stringify(dataToStore));
+      document.getElementById("count-text").textContent = "R: " + count.toFixed(2);
+
+      setTimeout(() => {
+        window.location.href = taskPage;
+      }, 200);
+    }
+
+    document.getElementById("cashout-btn").addEventListener("click", function () {
+      const amount = parseFloat(document.getElementById("count-text").textContent.replace("R:", "").trim());
+
+      const name = prompt("Enter your full name:");
+      const bank = prompt("Enter your bank name (e.g. Capitec, FNB, etc.):");
+      const account = prompt("Enter your bank account number:");
+
+      if (!name || !bank || !account) {
+        alert("All fields are required.");
+        return;
+      }
+
+      fetch("http://localhost:5000/cashout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, bank, account, amount })
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert(data.message);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("Cashout failed. Please try again.");
+      });
+    });
+  </script>
+</body>
+</html>
